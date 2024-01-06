@@ -1,0 +1,1 @@
+export const URL = "http://localhost:8080/"; //TODO da cambiare durante la build in prod
