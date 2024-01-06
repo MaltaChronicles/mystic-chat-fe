@@ -1,4 +1,4 @@
-import { URL } from "../const";
+import { URL } from "../js/const";
 
 export async function getValueByName(name) {
     try {

@@ -1,7 +1,24 @@
+import { useEffect, useState } from "react";
+import Game from "../pages/Game";
+import Home from "../pages/Home";
 
 export default function ServerOn() {
+    const [page, setPage] = useState();
+
+    useEffect(() => {
+        if(localStorage.getItem("token") != null)
+            setPage("GAME");
+        else
+            setPage("HOME");
+        
+    }, []);
+
     return (
-        <h1>ServerOn</h1>
+        <>
+            {
+                page === "GAME" ? <Game /> : <Home />
+            }
+        </>
     );
 }
 

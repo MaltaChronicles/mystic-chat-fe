@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import ServerOff from "./components/server_status/ServerOff";
 import ServerOn from "./components/server_status/ServerOn";
 import { useState } from "react";
-import { getValueByName } from "./js/api/configuration";
+import { getValueByName } from "./assets/api/configuration";
 
 export default function App() {
   const [serverStatus, setServerStatus] = useState("ON");
@@ -18,7 +18,7 @@ export default function App() {
   return (
     <>
       {
-        serverStatus == "ON" ? <ServerOn /> : <ServerOff />
+        serverStatus === "ON" ? <ServerOn /> : <ServerOff />
       }
     </>
   );
